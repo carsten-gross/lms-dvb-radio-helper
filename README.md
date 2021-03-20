@@ -10,8 +10,8 @@ Debian installation. The prepared configuration is set up to call
 http://localhost/station/ directly. This call directly generates an overview of
 all channel-tags.
 
-A description of the setup is stored on
-http://www.siski.de/~carsten/tvheadend.html.
+A description of the setup is stored on http://www.siski.de/~carsten/tvheadend.html and also on
+http://www.siski.de/~carsten/radio-streaming-squeezebox.html.
 
 Activate modules (if not already done) mod_cgi and mod_action (a2enmod cgi ;
 a2enmod action) on your apache2.  Take care that radio-list.pl is placed in the
@@ -22,6 +22,9 @@ At the beginning of radio-list.pl some individual parameters have to be
 configured (among others hostname, username and password for tvheadend access).
 
 The file 000-default.conf is a configuration template for apache2 which can be
-used instead of the file stored in Debian. 
+used instead of the file stored in Debian.
 
-Please adjust the IP addresses in the apache configuration file. 
+The script and the configuration is not 'ready-to-run', but have to be adapted to your installation.
+Please adjust the IP addresses in the apache configuration file, and adjust the hostnames and usernames
+in the perl script. Also take care for installation the necessary perl modules, for Debian stretch
+all modules are available as Debian packages (no CPAN installation necessary).
